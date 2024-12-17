@@ -8,9 +8,17 @@ import (
 
 func main() {
 	mesh.Test()
-	node, err := mesh.MakeNode()
+	node1, err := mesh.MakeNode()
 	if err != nil {
 		log.Fatal(err)
 	}
-	mesh.LogWithJson("created a node from the app: %v", node)
+	node2, err := mesh.MakeNode()
+	if err != nil {
+		log.Fatal(err)
+	}
+	node3, err := mesh.MakeNode()
+	if err != nil {
+		log.Fatal(err)
+	}
+	mesh.Log("created nodes:", []*mesh.Node{node1, node2, node3})
 }
