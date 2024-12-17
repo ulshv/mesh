@@ -1,20 +1,14 @@
 package mesh_v1
 
-import "fmt"
-
-func log(msg string) {
-	fmt.Printf("[mesh_v1]: %s\n", msg)
+func init() {
+	Log("init() is called.")
 }
 
-func init() {
-	log("init() is called.")
+func Test() {
+	Log("Test() is called")
 }
 
 // not called:
 // func main() {
-// 	log("main() is called.")
+// 	Log("main() is called.")
 // }
-
-func Test() {
-	log("Test() is called")
-}
