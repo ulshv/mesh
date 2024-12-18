@@ -73,6 +73,13 @@ func ListNodes() {
 	}
 }
 
-// func (n *Node) SendMessage(toNode *Node) error {
+func SendMessage(fromNode *Node, toNode *Node, message []byte) error {
+	return nil
+}
 
-// }
+func SendMessageByUUIDs(fromUuid string, toUuid string, message []byte) error {
+	fromNode, _ := GetNode(fromUuid)
+	toNode, _ := GetNode(toUuid)
+
+	return SendMessage(fromNode, toNode, message)
+}
